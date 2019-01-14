@@ -1,6 +1,3 @@
-// eslint-disable-next-line spaced-comment
-///<reference path="./chai-react-mock.d.ts"/>
-
 // eslint-disable-next-line no-redeclare
 export default ({ Assertion }: { Assertion: any }) => {
   Assertion.addProperty('rendered', function rendered() {
