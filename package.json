@@ -33,9 +33,10 @@
   },
   "author": "Andrei Picus",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
+    "chai": "^4.2.0",
+    "react-mock-component": "^0.4.2"
   },
   "devDependencies": {
     "@babel/core": "~7.2.0",
@@ -53,8 +54,6 @@
     "@types/node": "~10.12.2",
     "@types/react": "~16.7.0",
     "@types/react-dom": "~16.0.9",
-    "@types/sinon": "~7.0.0",
-    "@types/sinon-chai": "~3.2.1",
     "babel-plugin-istanbul": "~5.1.0",
     "chai": "~4.2.0",
     "codecov": "~3.1.0",
@@ -70,8 +69,7 @@
     "nyc": "~13.1.0",
     "react": "~16.7.0",
     "react-dom": "~16.7.0",
-    "sinon": "~7.2.0",
-    "sinon-chai": "~3.3.0",
+    "react-mock-component": "~0.4.2",
     "ts-node": "~7.0.1",
     "typemoq": "~2.1.0",
     "typescript": "~3.2.2",

@@ -2,8 +2,8 @@ import $ from 'jquery';
 import ReactDOM from 'react-dom';
 import { ReactElement } from 'react';
 import chai, { expect } from 'chai';
-import sinonChai from 'sinon-chai';
 import { wait as waitPoll } from 'dom-testing-library';
+import chaiReactMock from '../../src';
 import {
   runnerAfterEach,
   runnerBeforeEach,
@@ -11,7 +11,7 @@ import {
   runnerIt
 } from '../mocha-runner';
 
-chai.use(sinonChai);
+chai.use(chaiReactMock);
 export { expect };
 
 let componentContainer: HTMLDivElement;
