@@ -9,7 +9,7 @@
 ```typescript jsx
 import chai from 'chai';
 import chaiReactMock from 'chai-react-mock';
-import createReactStub from 'react-mock-component';
+import createReactMock from 'react-mock-component';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -17,7 +17,7 @@ chai.use(chaiReactMock);
 const { expect } = chai;
 
 interface StubProps { foo: string; }
-const Stub = createReactStub<StubProps>();
+const Stub = createReactMock<StubProps>();
 
 ReactDOM.render(<Stub foo="bar" />);
 

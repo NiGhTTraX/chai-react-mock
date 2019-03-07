@@ -1,10 +1,10 @@
 import React from 'react';
-import { createReactStub } from 'react-mock-component';
+import { createReactMock } from 'react-mock-component';
 import { describe, it, expect, $render } from './suite';
 
 describe('ChaiReactMock', () => {
   it('should assert whether a component was rendered', () => {
-    const Mock = createReactStub();
+    const Mock = createReactMock();
 
     expect(Mock).to.not.have.been.rendered;
     expect(() => expect(Mock).to.have.been.rendered).to.throw(
@@ -21,7 +21,7 @@ describe('ChaiReactMock', () => {
 
   it('should assert whether a component was rendered with props', () => {
     interface MockProps { foo: string; }
-    const Mock = createReactStub<MockProps>();
+    const Mock = createReactMock<MockProps>();
 
     expect(Mock).to.not.have.been.renderedWith({ foo: 'bar' });
     expect(() => expect(Mock).to.have.been.renderedWith({ foo: 'bar' })).to.throw(
@@ -38,7 +38,7 @@ describe('ChaiReactMock', () => {
 
   it('should chain assertions', () => {
     interface MockProps { foo: string; }
-    const Mock = createReactStub<MockProps>();
+    const Mock = createReactMock<MockProps>();
 
     $render(<Mock foo="bar" />);
 
