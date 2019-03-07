@@ -3,8 +3,8 @@ import { ReactMock } from 'react-mock-component';
 declare global {
   export namespace Chai {
     export interface ReactMockAssertion<Props> extends ReactMockLanguageChains<Props> {
-      rendered: boolean;
-      renderedWith: (props: Partial<Props>) => void;
+      rendered: ReactMockAssertion<Props>;
+      renderedWith: (props: Partial<Props>) => ReactMockAssertion<Props>;
     }
 
     export interface ReactMockLanguageChains<Props> {
@@ -12,6 +12,7 @@ declare global {
       have: ReactMockAssertion<Props>;
       been: ReactMockAssertion<Props>;
       not: ReactMockAssertion<Props>;
+      and: ReactMockAssertion<Props>;
     }
 
     interface AssertionStatic {

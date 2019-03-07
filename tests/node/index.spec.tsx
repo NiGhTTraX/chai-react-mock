@@ -35,4 +35,15 @@ describe('ChaiReactMock', () => {
       'Expected component to not have been rendered with { foo: \'bar\' }'
     );
   });
+
+  it('should chain assertions', () => {
+    interface MockProps { foo: string; }
+    const Mock = createReactStub<MockProps>();
+
+    $render(<Mock foo="bar" />);
+
+    expect(Mock).to.have.been.rendered
+      .and.to.have.been.renderedWith({ foo: 'bar' })
+      .and.to.not.have.been.renderedWith({ foo: 'baz' });
+  });
 });
