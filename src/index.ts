@@ -4,6 +4,7 @@ declare global {
   export namespace Chai {
     export interface ReactMockAssertion<Props> extends ReactMockLanguageChains<Props> {
       rendered: boolean;
+      renderedWith: (props: Partial<Props>) => void;
     }
 
     export interface ReactMockLanguageChains<Props> {
@@ -21,6 +22,7 @@ declare global {
 
 interface ChaiAssertion {
   addProperty: (name: string, fn: () => void) => void;
+  addMethod: (name: string, fn: (...args: any[]) => void) => void;
 }
 
 // eslint-disable-next-line no-redeclare
@@ -34,6 +36,26 @@ export default ({ Assertion }: { Assertion: ChaiAssertion }) => {
       Component.rendered,
       'Expected component to have been rendered',
       'Expected component to not have been rendered'
+    );
+  });
+
+  Assertion.addMethod('renderedWith', function renderedWith<Props>(props: Props) {
+    // @ts-ignore
+    const Component: ReactMock<Props> = this._obj;
+
+    const msg = Component.rendered
+      ? 'but it was rendered with #{act}'
+      : 'but it was never rendered';
+
+    // @ts-ignore
+    this.assert(
+      Component.renderedWith(props),
+      `Expected component to have been rendered with #{exp}
+${msg}`,
+      `Expected component to not have been rendered with #{exp}
+${msg}`,
+      props,
+      Component.props
     );
   });
 };
