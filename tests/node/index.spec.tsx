@@ -1,5 +1,5 @@
 import React from 'react';
-import { createReactMock } from 'react-mock-component';
+import createReactMock from 'react-mock-component';
 import { describe, it, expect, $render } from './suite';
 
 describe('ChaiReactMock', () => {
