@@ -72,7 +72,7 @@
     "react-mock-component": "~0.4.2",
     "ts-node": "~7.0.1",
     "typemoq": "~2.1.0",
-    "typescript": "~3.2.2",
+    "typescript": "~3.3.0",
     "typescript-eslint-parser": "~20.1.1"
   }
 }
