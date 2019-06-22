@@ -1,6 +1,6 @@
 > Chai plugin for [react-mock-component](https://github.com/NiGhTTraX/react-mock-component)
 
-[![Build Status](https://travis-ci.com/NiGhTTraX/chai-react-mock.svg?branch=master)](https://travis-ci.com/NiGhTTraX/chai-react-mock) [![codecov](https://codecov.io/gh/NiGhTTraX/chai-react-mock/branch/master/graph/badge.svg)](https://codecov.io/gh/NiGhTTraX/chai-react-mock)
+[![Build Status](https://travis-ci.com/NiGhTTraX/chai-react-mock.svg?branch=master)](https://travis-ci.com/NiGhTTraX/chai-react-mock) [![codecov](https://codecov.io/gh/NiGhTTraX/chai-react-mock/branch/master/graph/badge.svg)](https://codecov.io/gh/NiGhTTraX/chai-react-mock) ![npm type definitions](https://img.shields.io/npm/types/chai-react-mock.svg)
 
 ----
 
