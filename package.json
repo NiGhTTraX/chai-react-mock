@@ -34,7 +34,7 @@
   "dependencies": {},
   "peerDependencies": {
     "chai": "^4.2.0",
-    "react-mock-component": "^1.0.1"
+    "react-mock-component": "^2.1.0"
   },
   "devDependencies": {
     "@nighttrax/eslint-config-tsx": "~3.0.0",
