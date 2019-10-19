@@ -17,10 +17,8 @@
     "compile": "tsc --project tsconfig.build.json --declaration --outDir ./dist",
     "prepublishOnly": "npm run build",
     "lint": "eslint --ext ts,tsx,js .",
-    "test": "./tests/run.sh",
-    "test:node": "TS_NODE_CACHE=0 mocha --opts tests/node/mocha.opts",
-    "test:node:coverage": "TS_NODE_CACHE=0 COVERAGE=1 nyc mocha --opts tests/node/mocha.coverage.opts",
-    "report-coverage": "nyc report --reporter=json && codecov -f tests/results/coverage/coverage-final.json"
+    "test": "tdd-buffet test --coverage",
+    "report-coverage": "nyc report --reporter=json && codecov -f tests/results/coverage-final.json"
   },
   "husky": {
     "hooks": {
@@ -39,38 +37,24 @@
     "react-mock-component": "^1.0.1"
   },
   "devDependencies": {
-    "@babel/core": "~7.4.0",
-    "@babel/plugin-proposal-class-properties": "~7.4.0",
-    "@babel/plugin-proposal-decorators": "~7.4.0",
-    "@babel/preset-env": "~7.4.0",
-    "@babel/preset-react": "~7.0.0",
-    "@babel/preset-typescript": "~7.3.0",
-    "@babel/register": "~7.4.0",
     "@nighttrax/eslint-config-tsx": "~2.0.0",
+    "@tdd-buffet/react": "~0.5.5",
     "@types/chai": "~4.1.7",
     "@types/jquery": "~3.3.22",
-    "@types/jsdom": "~12.2.0",
-    "@types/mocha": "~5.2.5",
     "@types/node": "~10.12.2",
     "@types/react": "~16.8.0",
     "@types/react-dom": "~16.8.0",
     "@typescript-eslint/eslint-plugin": "~1.11.0",
-    "babel-plugin-istanbul": "~5.1.0",
     "chai": "~4.2.0",
     "codecov": "~3.5.0",
-    "dom-testing-library": "~4.1.0",
     "eslint": "~5.16.0",
     "eslint-plugin-react": "~7.14.0",
     "husky": "~3.0.0",
-    "jquery": "~3.4.0",
-    "jsdom": "~15.1.0",
     "lint-staged": "~9.0.0",
-    "mocha": "~6.1.0",
-    "nyc": "~14.1.0",
     "react": "~16.8.0",
     "react-dom": "~16.8.0",
     "react-mock-component": "~1.0.1",
-    "ts-node": "~8.3.0",
+    "tdd-buffet": "~0.14.2",
     "typemoq": "~2.1.0",
     "typescript": "~3.5.0"
   }

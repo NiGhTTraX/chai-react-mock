@@ -1,6 +1,11 @@
 import React from 'react';
 import createReactMock from 'react-mock-component';
-import { describe, it, expect, $render } from './suite';
+import { $render } from '@tdd-buffet/react';
+import { describe, it } from 'tdd-buffet/suite/node';
+import chai, { expect } from 'chai';
+import chaiReactMock from '../src/index';
+
+chai.use(chaiReactMock);
 
 describe('ChaiReactMock', () => {
   it('should assert whether a component was rendered', () => {
