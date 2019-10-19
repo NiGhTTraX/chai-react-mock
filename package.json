@@ -34,7 +34,7 @@
   "dependencies": {},
   "peerDependencies": {
     "chai": "^4.2.0",
-    "react-mock-component": "^1.0.1"
+    "react-mock-component": "^2.0.0"
   },
   "devDependencies": {
     "@nighttrax/eslint-config-tsx": "~2.0.0",
@@ -53,7 +53,7 @@
     "lint-staged": "~9.0.0",
     "react": "~16.8.0",
     "react-dom": "~16.8.0",
-    "react-mock-component": "~1.0.1",
+    "react-mock-component": "~2.1.0",
     "tdd-buffet": "~0.14.2",
     "typemoq": "~2.1.0",
     "typescript": "~3.5.0"
