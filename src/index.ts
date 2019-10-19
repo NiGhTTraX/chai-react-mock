@@ -30,6 +30,7 @@ interface ChaiAssertion {
 export default ({ Assertion }: { Assertion: ChaiAssertion }) => {
   Assertion.addProperty('rendered', function rendered() {
     // @ts-ignore
+    // eslint-disable-next-line no-underscore-dangle
     const Component = this._obj;
 
     // @ts-ignore
@@ -42,6 +43,7 @@ export default ({ Assertion }: { Assertion: ChaiAssertion }) => {
 
   Assertion.addMethod('renderedWith', function renderedWith<Props>(props: Props) {
     // @ts-ignore
+    // eslint-disable-next-line no-underscore-dangle
     const Component: ReactMock<Props> = this._obj;
 
     const msg = Component.rendered
