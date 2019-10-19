@@ -15,19 +15,14 @@ declare global {
       and: ReactMockAssertion<Props>;
     }
 
-    interface AssertionStatic {
+    interface ExpectStatic {
       <Props>(target: ReactMock<Props>, message?: string): ReactMockAssertion<Props>;
     }
   }
 }
 
-interface ChaiAssertion {
-  addProperty: (name: string, fn: () => void) => void;
-  addMethod: (name: string, fn: (...args: any[]) => void) => void;
-}
-
 // eslint-disable-next-line no-redeclare
-export default ({ Assertion }: { Assertion: ChaiAssertion }) => {
+const chaiReactMock: Chai.ChaiPlugin = ({ Assertion }) => {
   Assertion.addProperty('rendered', function rendered() {
     // @ts-ignore
     // eslint-disable-next-line no-underscore-dangle
@@ -58,7 +53,9 @@ ${msg}`,
       `Expected component to not have been rendered with #{exp}
 ${msg}`,
       props,
-      Component.props
+      Component.renderCalls
     );
   });
 };
+
+export default chaiReactMock;
