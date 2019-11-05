@@ -56,6 +56,6 @@
     "react-mock-component": "~2.1.0",
     "tdd-buffet": "~0.14.2",
     "typemoq": "~2.1.0",
-    "typescript": "~3.6.4"
+    "typescript": "~3.7.0"
   }
 }
