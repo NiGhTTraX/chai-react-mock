@@ -54,7 +54,7 @@
     "react": "~16.13.0",
     "react-dom": "~16.13.0",
     "react-mock-component": "~2.1.0",
-    "tdd-buffet": "~0.15.0",
+    "tdd-buffet": "~0.16.0",
     "typemoq": "~2.1.0",
     "typescript": "~3.8.0"
   }
