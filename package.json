@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@nighttrax/eslint-config-tsx": "~6.1.0",
-    "@tdd-buffet/react": "~1.0.0",
+    "@tdd-buffet/react": "~1.1.0",
     "@tdd-buffet/tsconfig": "~1.0.0",
     "@types/chai": "~4.2.3",
     "@types/jquery": "~3.3.22",
