@@ -1,8 +1,9 @@
-import { ReactMock } from 'react-mock-component';
+import { ReactMock } from "react-mock-component";
 
 declare global {
   export namespace Chai {
-    export interface ReactMockAssertion<Props> extends ReactMockLanguageChains<Props> {
+    export interface ReactMockAssertion<Props>
+      extends ReactMockLanguageChains<Props> {
       rendered: ReactMockAssertion<Props>;
       renderedWith: (props: Partial<Props>) => ReactMockAssertion<Props>;
     }
@@ -16,14 +17,16 @@ declare global {
     }
 
     interface ExpectStatic {
-      <Props>(target: ReactMock<Props>, message?: string): ReactMockAssertion<Props>;
+      <Props>(target: ReactMock<Props>, message?: string): ReactMockAssertion<
+        Props
+      >;
     }
   }
 }
 
 // eslint-disable-next-line no-redeclare
 const chaiReactMock: Chai.ChaiPlugin = ({ Assertion }) => {
-  Assertion.addProperty('rendered', function rendered() {
+  Assertion.addProperty("rendered", function rendered() {
     // @ts-ignore
     // eslint-disable-next-line no-underscore-dangle
     const Component = this._obj;
@@ -31,19 +34,21 @@ const chaiReactMock: Chai.ChaiPlugin = ({ Assertion }) => {
     // @ts-ignore
     this.assert(
       Component.rendered,
-      'Expected component to have been rendered',
-      'Expected component to not have been rendered'
+      "Expected component to have been rendered",
+      "Expected component to not have been rendered"
     );
   });
 
-  Assertion.addMethod('renderedWith', function renderedWith<Props>(props: Props) {
+  Assertion.addMethod("renderedWith", function renderedWith<Props>(
+    props: Props
+  ) {
     // @ts-ignore
     // eslint-disable-next-line no-underscore-dangle
     const Component: ReactMock<Props> = this._obj;
 
     const msg = Component.rendered
-      ? 'but it was rendered with #{act}'
-      : 'but it was never rendered';
+      ? "but it was rendered with #{act}"
+      : "but it was never rendered";
 
     // @ts-ignore
     this.assert(
