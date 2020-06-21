@@ -41,7 +41,7 @@
     "@tdd-buffet/react": "~1.1.0",
     "@tdd-buffet/tsconfig": "~1.0.0",
     "@types/chai": "~4.2.3",
-    "@types/jquery": "~3.3.22",
+    "@types/jquery": "~3.5.0",
     "@types/node": "~12.12.0",
     "@types/react": "~16.9.9",
     "@types/react-dom": "~16.9.2",
